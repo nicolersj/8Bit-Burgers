@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "exampledb",
+    "password": "gwbootcamp",
+    "database": "burger_bitdb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "gwbootcamp",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
