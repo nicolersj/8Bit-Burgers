@@ -10,7 +10,7 @@
         <!-- Dynamically Insert Ready Burgers Here -->
       <div id="Meats">
         {{#each meats}}
-          {{#unless devoured}}
+          {{#unless chosen}}
           <li>
   		<p><span class="label"></span> {{this.image}}</p>
       <p><span class="label"></span> {{this.product}}</p>
@@ -21,6 +21,90 @@
         {{/unless}}
         {{/each}}
         </div>
+
+        <div id="Buns">
+          {{#each buns}}
+            {{#unless chosen}}
+            <li>
+    		<p><span class="label"></span> {{this.image}}</p>
+        <p><span class="label"></span> {{this.product}}</p>
+        <p><span class="label">Price:</span> {{this.price}}</p>
+        <button class="btn btn-success devour-button" type="submit">Select It!</button>
+
+
+          {{/unless}}
+          {{/each}}
+          </div>
+
+          <div id="Cheeses">
+            {{#each cheeses}}
+              {{#unless chosen}}
+              <li>
+      		<p><span class="label"></span> {{this.image}}</p>
+          <p><span class="label"></span> {{this.product}}</p>
+          <p><span class="label">Price:</span> {{this.price}}</p>
+          <button class="btn btn-success devour-button" type="submit">Select It!</button>
+
+
+            {{/unless}}
+            {{/each}}
+            </div>
+
+            <div id="Veggies">
+              {{#each veggies}}
+                {{#unless chosen}}
+                <li>
+        		<p><span class="label"></span> {{this.image}}</p>
+            <p><span class="label"></span> {{this.product}}</p>
+            <p><span class="label">Price:</span> {{this.price}}</p>
+            <button class="btn btn-success devour-button" type="submit">Select It!</button>
+
+
+              {{/unless}}
+              {{/each}}
+              </div>
+
+              <div id="Sides">
+                {{#each sides}}
+                  {{#unless chosen}}
+                  <li>
+          		<p><span class="label"></span> {{this.image}}</p>
+              <p><span class="label"></span> {{this.product}}</p>
+              <p><span class="label">Price:</span> {{this.price}}</p>
+              <button class="btn btn-success devour-button" type="submit">Select It!</button>
+
+
+                {{/unless}}
+                {{/each}}
+                </div>
+
+                <div id="Drinks">
+                  {{#each drinks}}
+                    {{#unless chosen}}
+                    <li>
+            		<p><span class="label"></span> {{this.image}}</p>
+                <p><span class="label"></span> {{this.product}}</p>
+                <p><span class="label">Price:</span> {{this.price}}</p>
+                <button class="btn btn-success devour-button" type="submit">Select It!</button>
+
+
+                  {{/unless}}
+                  {{/each}}
+                  </div>
+
+                  <div id="Add_On">
+                    {{#each add_on}}
+                      {{#unless chosen}}
+                      <li>
+              		<p><span class="label"></span> {{this.image}}</p>
+                  <p><span class="label"></span> {{this.product}}</p>
+                  <p><span class="label">Price:</span> {{this.price}}</p>
+                  <button class="btn btn-success devour-button" type="submit">Select It!</button>
+
+
+                    {{/unless}}
+                    {{/each}}
+                    </div>
 
       </div>
     </div>
