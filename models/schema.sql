@@ -1,76 +1,73 @@
+CREATE DATABASE burger_bitdb;
 
-DROP DATABASE IF EXISTS 8bitburgers;
-CREATE DATABASE 8bitburgers;
+use burger_bitdb;
 
-USE 8bitburgers;
-
-CREATE TABLE products (
-	item_id INTEGER(11) AUTO_INCREMENT NOT NULL,
-	product_name VARCHAR(30) NOT NULL,
-	product_type VARCHAR(20) NOT NULL,
-	price DECIMAL(10,2) NOT NULL,
-	PRIMARY KEY (item_id)
+CREATE TABLE meats
+(
+id int NOT NULL AUTO_INCREMENT,
+product varchar(255) NOT NULL,
+price DECIMAL(10,2) NOT NULL,
+image BLOB,
+PRIMARY KEY (id)
 );
 
-INSERT INTO products (product_name, product_type, price)
-VALUES  ('Beef', 'Meats', 5.00),
-        ('Chicken', 'Meats', 5.00),
-        ('Turkey', 'Meats', 5.00),
-        ('Veggie', 'Meats', 5.00),
-		('Brioche', 'Buns', 0.00),
-        ('Sesame', 'Buns', 0.00),
-        ('Wheat', 'Buns', 0.00),
-        ('Gluten Free', 'Buns', 0.00),
-        ('Lettuce Wrap', 'Buns', 0.00),
-		('Ketchup', 'Condiments', 0.25),
-        ('Mayo', 'Condiments', 0.25),
-        ('Mustard', 'Condiments', 0.25),
-        ('BBQ', 'Condiments', 0.25),
-        ('Ranch', 'Condiments', 0.25),
-        ('Chipotle Mayo', 'Condiments', 0.25),
-        ('Sriracha', 'Condiments', 0.25),
-        ('Duck Sauce', 'Condiments', 0.25),
-        ('Sweet & Sour', 'Condiments', 0.25),
-		('American', 'Cheese', 0.75),
-        ('Provolone', 'Cheese', 0.75),
-        ('Cheddar', 'Cheese', 0.75),
-        ('Gouda', 'Cheese', 0.75),
-        ('Feta', 'Cheese', 0.75),
-        ('Swiss', 'Cheese', 0.75),
-        ('Pepper Jack', 'Cheese', 0.75),
-        ('Blue Cheese', 'Cheese', 0.75),
-        ('Bell Pepper', 'Veggies', 0.50),
-        ('Lettuce', 'Veggies', 0.50),
-        ('Onion', 'Veggies', 0.50),
-        ('Tomato', 'Veggies', 0.50),
-        ('Banana Peppers', 'Veggies', 0.50),
-        ('Pickles', 'Veggies', 0.50),
-        ('Mushrooms', 'Veggies', 0.50),
-        ('Arugula', 'Veggies', 0.50),
-        ('Bean Sprouts', 'Veggies', 0.50),
-        ('Kale', 'Veggies', 0.50),
-        ('Spinach', 'Veggies', 0.50),
-		('Avocado', 'Add Ons', 2.00),
-        ('Lobster', 'Add Ons', 2.00),
-        ('Shrimp', 'Add Ons', 2.00),
-        ('Bacon', 'Add Ons', 2.00),
-        ('Fried Egg', 'Add Ons', 2.00),
-        ('Pepperoni', 'Add Ons', 2.00),
-        ('Pineapple', 'Add Ons', 2.00),
-        ('Strawberries', 'Add Ons', 2.00),
-        ('Peanut Butter', 'Add Ons', 2.00),
-        ('Anchovies', 'Add Ons', 2.00),
-        ('Captn Crunch', 'Add Ons', 2.00),
-		('Fruit', 'Sides', 3.00),
-        ('Mashed Potatoes', 'Sides', 3.00),
-        ('French Fries', 'Sides', 3.00),
-        ('Cole Slaw', 'Sides', 3.00),
-        ('Mixed Veggies', 'Sides', 3.00),
-        ('Tater Tots', 'Sides', 3.00),
-		('Coke', 'Drinks', 1.50),
-        ('Diet Coke', 'Drinks', 1.50),
-        ('Lemonade', 'Drinks', 1.50),
-        ('Sprite', 'Drinks', 1.50),
-        ('Iced Tea', 'Drinks', 1.50),
-        ('Smartest Water', 'Drinks', 1.50);
+
+CREATE TABLE buns
+(
+id int NOT NULL AUTO_INCREMENT,
+product varchar(255) NOT NULL,
+price DECIMAL(10,2) NOT NULL,
+image BLOB,
+PRIMARY KEY (id)
+);
+
+
+CREATE TABLE cheeses
+(
+id int NOT NULL AUTO_INCREMENT,
+product varchar(255) NOT NULL,
+price DECIMAL(10,2) NOT NULL,
+image BLOB,
+PRIMARY KEY (id)
+);
+
+
+CREATE TABLE veggies
+(
+id int NOT NULL AUTO_INCREMENT,
+product varchar(255) NOT NULL,
+price DECIMAL(10,2) NOT NULL,
+image BLOB,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE sides
+(
+id int NOT NULL AUTO_INCREMENT,
+product varchar(255) NOT NULL,
+price DECIMAL(10,2) NOT NULL,
+image BLOB,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE drinks
+(
+id int NOT NULL AUTO_INCREMENT,
+product varchar(255) NOT NULL,
+price DECIMAL(10,2) NOT NULL,
+image BLOB,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE adds_on
+(
+id int NOT NULL AUTO_INCREMENT,
+product varchar(255) NOT NULL,
+price DECIMAL(10,2) NOT NULL,
+image BLOB,
+PRIMARY KEY (id)
+);
+
+
+
 
