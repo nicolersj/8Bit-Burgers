@@ -76,7 +76,7 @@ chosen boolean default false,
 PRIMARY KEY (id)
 );
 
-CREATE TABLE adds_on
+CREATE TABLE add_ons
 (
 id int NOT NULL AUTO_INCREMENT,
 product varchar(255) NOT NULL,
@@ -85,7 +85,3 @@ image BLOB,
 chosen boolean default false,
 PRIMARY KEY (id)
 );
-
-
-
-
