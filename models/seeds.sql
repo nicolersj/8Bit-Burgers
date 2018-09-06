@@ -22,17 +22,16 @@ VALUES  ('Beef', 5.00, '\public\images\swisscheese.png', FALSE),
         ('Veggie', 5.00, '\public\images\swisscheese.png', FALSE);
 
 INSERT INTO veggies (product, price, image, chosen)
-VALUES  ('Bell Pepper', 0.50, '\public\images\lettuce.png', FALSE),
+VALUES  ('Bell Pepper', 0.50, '\public\images\bellpepper.png', FALSE),
         ('Lettuce', 0.50, '\public\images\lettuce.png', FALSE),
         ('Onion', 0.50, '\public\images\onion.png', FALSE),
         ('Tomato', 0.50, '\public\images\tomato.png', FALSE),
-        ('Banana Peppers', 0.50, '\public\images\lettuce.png', FALSE),
+        ('Banana Peppers', 0.50, '\public\images\bananapepper.png', FALSE),
         ('Pickles', 0.50, '\public\images\pickle.png', FALSE),
         ('Mushrooms', 0.50, '\public\images\mushroom.png', FALSE),
-        ('Arugula', 0.50, '\public\images\lettuce.png', FALSE),
-        ('Bean Sprouts', 0.50, '\public\images\lettuce.png', FALSE),
-        ('Kale', 0.50, '\public\images\lettuce.png', FALSE),
-        ('Spinach', 0.50, '\public\images\lettuce.png', FALSE);
+        ('Arugula', 0.50, '\public\images\arugula.png', FALSE),
+        ('Kale', 0.50, '\public\images\kale.png', FALSE),
+        ('Spinach', 0.50, '\public\images\spinach.png', FALSE);
 
 INSERT INTO add_ons (product, price, image, chosen)
 VALUES 	('Avocado', 2.00, '\public\images\lettuce.png', FALSE),
@@ -51,11 +50,11 @@ VALUES  ('Fruit', 3.00, '\public\images\shrimp.png', FALSE),
         ('Tater Tots', 3.00, '\public\images\shrimp.png', FALSE);
 
 INSERT INTO drinks (product, price, image, chosen)
-VALUES 	('Coke', 1.50, '\public\images\shrimp.png', FALSE),
-        ('Diet Coke', 1.50, '\public\images\shrimp.png', FALSE),
-        ('Lemonade', 1.50, '\public\images\shrimp.png', FALSE),
-        ('Sprite', 1.50, '\public\images\shrimp.png', FALSE),
-        ('Iced Tea', 1.50, '\public\images\shrimp.png', FALSE);
+VALUES 	('Coke', 1.50, '\public\images\coke.png', FALSE),
+        ('Diet Coke', 1.50, '\public\images\diet.png', FALSE),
+        ('Lemonade', 1.50, '\public\images\lemonade.png', FALSE),
+        ('Sprite', 1.50, '\public\images\sprite.png', FALSE),
+        ('Iced Tea', 1.50, '\public\images\icedtea.png', FALSE);
 
 INSERT INTO condiments (product, price, image, chosen)
 VALUES  ('Ketchup', 0.25, '\public\images\ketchup.png', FALSE),
