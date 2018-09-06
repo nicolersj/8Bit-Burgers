@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var burger = require('../models');
+var db = require('../models');
 
 router.get('/', function(req, res) {
   // db.all(function(burger_data) {
