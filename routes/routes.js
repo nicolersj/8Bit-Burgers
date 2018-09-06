@@ -6,27 +6,27 @@ router.get('/', function(req, res) {
   // db.all(function(burger_data) {
   //   console.log(burger_data);
   // })
-
-  db.findAll({}).then(function(results) {
-    // results are available to us inside the .then
-    // console.log(results);
-    res.render("index", {
-      buns: results
-    }, {
-      meats: results
-    }, {
-      cheeses: results
-    }, {
-      veggies: results
-    }, {
-      sides: results
-    }, {
-      drinks: results
-    }, {
-      add_on: results
-    });
-
-  });
+  //
+  // db.findAll({}).then(function(results) {
+  //   // results are available to us inside the .then
+  //   // console.log(results);
+  //   res.render("index", {
+  //     buns: results
+  //   }, {
+  //     meats: results
+  //   }, {
+  //     cheeses: results
+  //   }, {
+  //     veggies: results
+  //   }, {
+  //     sides: results
+  //   }, {
+  //     drinks: results
+  //   }, {
+  //     add_on: results
+  //   });
+  //
+  // });
   console.log("homepage")
 });
 
