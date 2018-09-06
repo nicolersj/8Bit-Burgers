@@ -2,17 +2,21 @@ require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
-
+var methodOverride = require('method-override');
 var db = require("./models");
 
 var app = express();
+app.use(express.static(__dirname + '/public'));
+// app.use(express.static("public"));
+
 var PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+   extended: false
+ }));
 app.use(bodyParser.json());
-app.use(express.static("public"));
 
+app.use(methodOverride('_method'));
 // Handlebars
 app.engine(
   "handlebars",
@@ -23,8 +27,9 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+var routes = require('./routes/routes.js');
+app.use('/', routes);
+
 
 var syncOptions = { force: false };
 
