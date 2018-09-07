@@ -1,8 +1,7 @@
 <div id="home">
   <div class="container">
     <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-4 z-depth-3">
+      <div class="col-md-6 z-depth-3">
         <center>
       <h4 class="sub-heading">Menu</h4>
         </center>
@@ -10,10 +9,10 @@
 <br>
         <!-- Dynamically Insert Ready Burgers Here -->
       <div class="foodSection" id="Meats">
-        {{#each meats_data}}
+        {{#each data.meats}}
           {{#unless this.chosen}}
           <!-- <li> -->
-  		<p><span class="label"></span> {{this.image}}</p>
+  		<p><span class="label"></span> <img src="{{this.image}}"/></p>
       <p><span class="label"></span> {{this.product}}</p>
       <p><span class="label">Price:</span> {{this.price}}</p>
       <button class="btn btn-success devour-button" type="submit">Select It!</button>
@@ -52,10 +51,10 @@
             </div>
 
             <div class="foodSection" id="Veggies">
-              {{#each veggies}}
+              {{#each data.veggies}}
                 {{#unless this.chosen}}
                 <!-- <li> -->
-        		<p><span class="label"></span> {{this.image}}</p>
+        		<p><span class="label"></span> <img src="{{this.image}}"/></p>
             <p><span class="label"></span> {{this.product}}</p>
             <p><span class="label">Price:</span> {{this.price}}</p>
             <button class="btn btn-success devour-button" type="submit">Select It!</button>
@@ -66,10 +65,10 @@
               </div>
 
               <div class="foodSection" id="Sides">
-                {{#each sides}}
+                {{#each data.sides}}
                   {{#unless this.chosen}}
-                  <li>
-          		<p><span class="label"></span> {{this.image}}</p>
+                  <!-- <li> -->
+          		<p><span class="label"></span> <img src="{{this.image}}"/></p>
               <p><span class="label"></span> {{this.product}}</p>
               <p><span class="label">Price:</span> {{this.price}}</p>
               <button class="btn btn-success devour-button" type="submit">Select It!</button>
@@ -80,10 +79,10 @@
                 </div>
 
                 <div class="foodSection" id="Drinks">
-                  {{#each drinks}}
+                  {{#each data.drinks}}
                     {{#unless this.chosen}}
-                    <li>
-            		<p><span class="label"></span> {{this.image}}</p>
+                    <!-- <li> -->
+            		<p><span class="label"></span> <img src="{{this.image}}"/></p>
                 <p><span class="label"></span> {{this.product}}</p>
                 <p><span class="label">Price:</span> {{this.price}}</p>
                 <button class="btn btn-success devour-button" type="submit">Select It!</button>
@@ -93,11 +92,11 @@
                   {{/each}}
                   </div>
 
-                  <div class="foodSection" id="Add_On">
-                    {{#each add_on}}
+                  <div class="foodSection" id="add_ons">
+                    {{#each data.add_ons}}
                       {{#unless this.chosen}}
-                      <li>
-              		<p><span class="label"></span> {{this.image}}</p>
+                      <!-- <li> -->
+              		<p><span class="label"></span> <img src="{{this.image}}"/></p>
                   <p><span class="label"></span> {{this.product}}</p>
                   <p><span class="label">Price:</span> {{this.price}}</p>
                   <button class="btn btn-success devour-button" type="submit">Select It!</button>
@@ -110,8 +109,8 @@
       </div>
     </div>
 
-<div class="col-md-2"></div>
-<div class="col-md-4 z-depth-3">
+<div class="col-md-1"></div>
+<div class="col-md-5 z-depth-3">
   <center>
       <h4 class="sub-heading">Receipt</h4>
     </center>
@@ -129,7 +128,6 @@
       </div>
     </div>
   </center>
-  <div class="col-md-4"></div>
 </div>
     </div>
   </div>
