@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-1"></div>
-      <div class="col-md-5 z-depth-3 ">
+      <div class="col-md-5 z-depth-3">
         <center>
       <h4 class="sub-heading">Menu</h4>
         </center>
@@ -12,7 +12,7 @@
       <div id="Meats">
         {{#each meats_data}}
           {{#unless this.chosen}}
-          <li>
+          <!-- <li> -->
   		<p><span class="label"></span> {{this.image}}</p>
       <p><span class="label"></span> {{this.product}}</p>
       <p><span class="label">Price:</span> {{this.price}}</p>
@@ -24,10 +24,10 @@
         </div>
 
         <div id="Buns">
-          {{#each buns_data}}
+          {{#each data.buns}}
             {{#unless this.chosen}}
-            <li>
-    		<p><span class="label"></span> {{this.image}}</p>
+            <!-- <li> -->
+    		<p><span class="label"></span> <img src="{{this.image}}"/></p>
         <p><span class="label"></span> {{this.product}}</p>
         <p><span class="label">Price:</span> {{this.price}}</p>
         <button class="btn btn-success devour-button" type="submit">Select It!</button>
@@ -38,10 +38,10 @@
           </div>
 
           <div id="Cheeses">
-            {{#each cheeses}}
+            {{#each data.cheeses}}
               {{#unless this.chosen}}
               <li>
-      		<p><span class="label"></span> {{this.image}}</p>
+      		<p><span class="label"></span> <img src="{{this.image}}"/></p>
           <p><span class="label"></span> {{this.product}}</p>
           <p><span class="label">Price:</span> {{this.price}}</p>
           <button class="btn btn-success devour-button" type="submit">Select It!</button>
@@ -54,7 +54,7 @@
             <div id="Veggies">
               {{#each veggies}}
                 {{#unless this.chosen}}
-                <li>
+                <!-- <li> -->
         		<p><span class="label"></span> {{this.image}}</p>
             <p><span class="label"></span> {{this.product}}</p>
             <p><span class="label">Price:</span> {{this.price}}</p>
