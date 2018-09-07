@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "lotus",
+    "password": "1875Njr1875",
     "database": "burger_bitdb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "lotus",
+    "password": "1875Njr1875",
     "database": "burger_bitdb",
     "host": "localhost",
     "dialect": "mysql",
