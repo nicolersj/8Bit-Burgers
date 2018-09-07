@@ -1,18 +1,28 @@
 var express = require("express");
 var router = express.Router();
-var db = require("../models/burger");
+var BunsDB = require("../models/BunsDB");
+var CheesesDB = require("../models/CheesesDB");
 
 
 
 router.get("/", function(req, res){
+    
+    var data = {buns: {}, cheeses: {}};
+    BunsDB.findAll({}).then(function(results) {
 
-    db.findAll({}).then(function(results) {
-        // results are available to us inside the .then
-       // console.log(results);
-        res.render("index", {buns: results}, {meats: results}, {cheeses: results}, {veggies: results}, {sides:results}, {drinks:results},{add_on:results}); 
+        console.log(results);
+     data.buns =  results
+    });
+    
 
+    CheesesDB.findAll({}).then(function(results) {
+
+        console.log(results);
+        data.cheeses = results
+    
     });
 
+    res.render("index", {data: data});
 });
 
 
