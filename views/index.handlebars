@@ -1,88 +1,33 @@
 <div id="home">
   <div class="container">
     <div class="row">
+
+
+      <!-- menu section  -->
+
       <div class="col-md-6 z-depth-3">
         <center>
       <h4 class="sub-heading">Menu</h4>
         </center>
-      <div id="ready_to_eat">
 <br>
         <!-- Dynamically Insert Ready Burgers Here -->
-      <div class="foodSection" id="Meats">
-        {{#each data.meats}}
-          {{#unless this.chosen}}
-          <!-- <li> -->
-  		<p><span class="label"></span> <img src="{{this.image}}"/></p>
-      <p><span class="label"></span> {{this.product}}</p>
-      <p><span class="label">Price:</span> {{this.price}}</p>
-      <button class="btn btn-success devour-button" type="submit">Select It!</button>
 
+        <div class="panel-group" id="accordion">
 
-        {{/unless}}
-        {{/each}}
-        </div>
-
-        <div class="foodSection" id="Buns">
-          {{#each data.buns}}
-            {{#unless this.chosen}}
-            <!-- <li> -->
-    		<p><span class="label"></span> <img src="{{this.image}}"/></p>
-        <p><span class="label"></span> {{this.product}}</p>
-        <p><span class="label">Price:</span> {{this.price}}</p>
-        <button class="btn btn-success devour-button" type="submit">Select It!</button>
-
-
-          {{/unless}}
-          {{/each}}
-          </div>
-
-          <div class="foodSection" id="Cheeses">
-            {{#each data.cheeses}}
-              {{#unless this.chosen}}
-              <!-- <li> -->
-      		<p><span class="label"></span> <img src="{{this.image}}"/></p>
-          <p><span class="label"></span> {{this.product}}</p>
-          <p><span class="label">Price:</span> {{this.price}}</p>
-          <button class="btn btn-success devour-button" type="submit">Select It!</button>
-
-
-            {{/unless}}
-            {{/each}}
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                Meat Choices:</a>
+              </h4>
             </div>
-
-            <div class="foodSection" id="Veggies">
-              {{#each data.veggies}}
-                {{#unless this.chosen}}
-                <!-- <li> -->
-        		<p><span class="label"></span> <img src="{{this.image}}"/></p>
-            <p><span class="label"></span> {{this.product}}</p>
-            <p><span class="label">Price:</span> {{this.price}}</p>
-            <button class="btn btn-success devour-button" type="submit">Select It!</button>
-
-
-              {{/unless}}
-              {{/each}}
-              </div>
-
-              <div class="foodSection" id="Sides">
-                {{#each data.sides}}
-                  {{#unless this.chosen}}
-                  <!-- <li> -->
-          		<p><span class="label"></span> <img src="{{this.image}}"/></p>
-              <p><span class="label"></span> {{this.product}}</p>
-              <p><span class="label">Price:</span> {{this.price}}</p>
-              <button class="btn btn-success devour-button" type="submit">Select It!</button>
-
-
-                {{/unless}}
-                {{/each}}
-                </div>
-
-                <div class="foodSection" id="Drinks">
-                  {{#each data.drinks}}
+            <div id="collapse1" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <div class="foodSection" id="Meats">
+                  {{#each data.meats}}
                     {{#unless this.chosen}}
                     <!-- <li> -->
-            		<p><span class="label"></span> <img src="{{this.image}}"/></p>
+                <p><span class="label"></span> <img src="{{this.image}}"/></p>
                 <p><span class="label"></span> {{this.product}}</p>
                 <p><span class="label">Price:</span> {{this.price}}</p>
                 <button class="btn btn-success devour-button" type="submit">Select It!</button>
@@ -91,25 +36,174 @@
                   {{/unless}}
                   {{/each}}
                   </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                Bun Choices:</a>
+              </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+              <div class="panel-body"><div class="foodSection" id="Buns">
+                {{#each data.buns}}
+                  {{#unless this.chosen}}
+                  <!-- <li> -->
+              <p><span class="label"></span> <img src="{{this.image}}"/></p>
+              <p><span class="label"></span> {{this.product}}</p>
+              <p><span class="label">Price:</span> {{this.price}}</p>
+              <button class="btn btn-success devour-button" type="submit">Select It!</button>
 
-                  <div class="foodSection" id="add_ons">
-                    {{#each data.add_ons}}
-                      {{#unless this.chosen}}
-                      <!-- <li> -->
-              		<p><span class="label"></span> <img src="{{this.image}}"/></p>
-                  <p><span class="label"></span> {{this.product}}</p>
-                  <p><span class="label">Price:</span> {{this.price}}</p>
-                  <button class="btn btn-success devour-button" type="submit">Select It!</button>
+
+                {{/unless}}
+                {{/each}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                Cheese Choices:</a>
+              </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="foodSection" id="Cheeses">
+                {{#each data.cheeses}}
+                  {{#unless this.chosen}}
+                  <!-- <li> -->
+              <p><span class="label"></span> <img src="{{this.image}}"/></p>
+              <p><span class="label"></span> {{this.product}}</p>
+              <p><span class="label">Price:</span> {{this.price}}</p>
+              <button class="btn btn-success devour-button" type="submit">Select It!</button>
 
 
-                    {{/unless}}
-                    {{/each}}
-                    </div>
+                {{/unless}}
+                {{/each}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                Veggie Choices:</a>
+              </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="foodSection" id="Veggies">
+                  {{#each data.veggies}}
+                    {{#unless this.chosen}}
+                    <!-- <li> -->
+                <p><span class="label"></span> <img src="{{this.image}}"/></p>
+                <p><span class="label"></span> {{this.product}}</p>
+                <p><span class="label">Price:</span> {{this.price}}</p>
+                <button class="btn btn-success devour-button" type="submit">Select It!</button>
 
-      </div>
+
+                  {{/unless}}
+                  {{/each}}
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                Side Options:</a>
+              </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="foodSection" id="Sides">
+                  {{#each data.sides}}
+                    {{#unless this.chosen}}
+                    <!-- <li> -->
+                <p><span class="label"></span> <img src="{{this.image}}"/></p>
+                <p><span class="label"></span> {{this.product}}</p>
+                <p><span class="label">Price:</span> {{this.price}}</p>
+                <button class="btn btn-success devour-button" type="submit">Select It!</button>
+
+
+                  {{/unless}}
+                  {{/each}}
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                Drink Options:</a>
+              </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="foodSection" id="Drinks">
+                  {{#each data.drinks}}
+                    {{#unless this.chosen}}
+                    <!-- <li> -->
+                <p><span class="label"></span> <img src="{{this.image}}"/></p>
+                <p><span class="label"></span> {{this.product}}</p>
+                <p><span class="label">Price:</span> {{this.price}}</p>
+                <button class="btn btn-success devour-button" type="submit">Select It!</button>
+
+
+                  {{/unless}}
+                  {{/each}}
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                Premium Burger Add Ons:</a>
+              </h4>
+            </div>
+            <div id="collapse7" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="foodSection" id="add_ons">
+                  {{#each data.add_ons}}
+                    {{#unless this.chosen}}
+                    <!-- <li> -->
+                <p><span class="label"></span> <img src="{{this.image}}"/></p>
+                <p><span class="label"></span> {{this.product}}</p>
+                <p><span class="label">Price:</span> {{this.price}}</p>
+                <button class="btn btn-success devour-button" type="submit">Select It!</button>
+
+
+                  {{/unless}}
+                  {{/each}}
+                  </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
     </div>
 
+<!--  end of menu section-->
+
+
+<!-- divider -->
 <div class="col-md-1"></div>
+<!-- end of divider -->
+
+
+<!-- Receipt -->
+
 <div class="col-md-5 z-depth-3">
   <center>
       <h4 class="sub-heading">Receipt</h4>
@@ -128,7 +222,10 @@
       </div>
     </div>
   </center>
-</div>
+
+<!-- end of Receipt -->
+
+      </div>
     </div>
   </div>
 
