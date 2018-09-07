@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS burger_bitdb;
 CREATE DATABASE burger_bitdb;
 
 use burger_bitdb;
@@ -8,6 +9,7 @@ id int NOT NULL AUTO_INCREMENT,
 product varchar(255) NOT NULL,
 price DECIMAL(10,2) NOT NULL,
 image BLOB,
+chosen boolean default false,
 PRIMARY KEY (id)
 );
 
@@ -18,6 +20,7 @@ id int NOT NULL AUTO_INCREMENT,
 product varchar(255) NOT NULL,
 price DECIMAL(10,2) NOT NULL,
 image BLOB,
+chosen boolean default false,
 PRIMARY KEY (id)
 );
 
@@ -28,6 +31,7 @@ id int NOT NULL AUTO_INCREMENT,
 product varchar(255) NOT NULL,
 price DECIMAL(10,2) NOT NULL,
 image BLOB,
+chosen boolean default false,
 PRIMARY KEY (id)
 );
 
@@ -38,6 +42,17 @@ id int NOT NULL AUTO_INCREMENT,
 product varchar(255) NOT NULL,
 price DECIMAL(10,2) NOT NULL,
 image BLOB,
+chosen boolean default false,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE condiments
+(
+id int NOT NULL AUTO_INCREMENT,
+product varchar(255) NOT NULL,
+price DECIMAL(10,2) NOT NULL,
+image BLOB,
+chosen boolean default false,
 PRIMARY KEY (id)
 );
 
@@ -47,6 +62,7 @@ id int NOT NULL AUTO_INCREMENT,
 product varchar(255) NOT NULL,
 price DECIMAL(10,2) NOT NULL,
 image BLOB,
+chosen boolean default false,
 PRIMARY KEY (id)
 );
 
@@ -56,18 +72,16 @@ id int NOT NULL AUTO_INCREMENT,
 product varchar(255) NOT NULL,
 price DECIMAL(10,2) NOT NULL,
 image BLOB,
+chosen boolean default false,
 PRIMARY KEY (id)
 );
 
-CREATE TABLE adds_on
+CREATE TABLE add_ons
 (
 id int NOT NULL AUTO_INCREMENT,
 product varchar(255) NOT NULL,
 price DECIMAL(10,2) NOT NULL,
 image BLOB,
+chosen boolean default false,
 PRIMARY KEY (id)
 );
-
-
-
-
