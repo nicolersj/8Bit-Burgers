@@ -16,26 +16,25 @@ VALUES  ('American', 0.75, 'images/swisscheese.png', FALSE),
         ('Blue Cheese', 0.75, 'images/bluecheese.png', FALSE);
 
 INSERT INTO meats (product, price, image, chosen)
-VALUES  ('Beef', 5.00, 'images/swisscheese.png', FALSE),
-        ('Chicken', 5.00, 'images/swisscheese.png', FALSE),
-        ('Turkey', 5.00, 'images/swisscheese.png', FALSE),
-        ('Veggie', 5.00, 'images/swisscheese.png', FALSE);
+VALUES  ('Beef', 5.00, 'images/beef.png', FALSE),
+        ('Chicken', 5.00, 'images/chicken.png', FALSE),
+        ('Turkey', 5.00, 'images/turkey.png', FALSE),
+        ('Veggie', 5.00, 'images/lettuce.png', FALSE);
 
 INSERT INTO veggies (product, price, image, chosen)
-VALUES  ('Bell Pepper', 0.50, 'images/lettuce.png', FALSE),
+VALUES  ('Bell Pepper', 0.50, 'images/bellpepper.png', FALSE),
         ('Lettuce', 0.50, 'images/lettuce.png', FALSE),
         ('Onion', 0.50, 'images/onion.png', FALSE),
         ('Tomato', 0.50, 'images/tomato.png', FALSE),
-        ('Banana Peppers', 0.50, 'images/lettuce.png', FALSE),
+        ('Banana Peppers', 0.50, 'images/bananapepper.png', FALSE),
         ('Pickles', 0.50, 'images/pickle.png', FALSE),
         ('Mushrooms', 0.50, 'images/mushroom.png', FALSE),
-        ('Arugula', 0.50, 'images/lettuce.png', FALSE),
-        ('Bean Sprouts', 0.50, 'images/lettuce.png', FALSE),
-        ('Kale', 0.50, 'images/lettuce.png', FALSE),
-        ('Spinach', 0.50, 'images/lettuce.png', FALSE);
+        ('Arugula', 0.50, 'images/arugula.png', FALSE),
+        ('Kale', 0.50, 'images/kale.png', FALSE),
+        ('Spinach', 0.50, 'images/spinach.png', FALSE);
 
 INSERT INTO add_ons (product, price, image, chosen)
-VALUES 	('Avocado', 2.00, 'images/lettuce.png', FALSE),
+VALUES 	('Avocado', 2.00, 'images/avocado.png', FALSE),
         ('Lobster', 2.00, 'images/lobster.png', FALSE),
         ('Shrimp', 2.00, 'images/shrimp.png', FALSE),
         ('Bacon', 2.00, 'images/bacon.png', FALSE),
@@ -51,11 +50,11 @@ VALUES  ('Fruit', 3.00, 'images/shrimp.png', FALSE),
         ('Tater Tots', 3.00, 'images/shrimp.png', FALSE);
 
 INSERT INTO drinks (product, price, image, chosen)
-VALUES 	('Coke', 1.50, 'images/shrimp.png', FALSE),
-        ('Diet Coke', 1.50, 'images/shrimp.png', FALSE),
-        ('Lemonade', 1.50, 'images/shrimp.png', FALSE),
-        ('Sprite', 1.50, 'images/shrimp.png', FALSE),
-        ('Iced Tea', 1.50, 'images/shrimp.png', FALSE);
+VALUES 	('Coke', 1.50, 'images/coke.png', FALSE),
+        ('Diet Coke', 1.50, 'images/diet.png', FALSE),
+        ('Lemonade', 1.50, 'images/lemonade.png', FALSE),
+        ('Sprite', 1.50, 'images/sprite.png', FALSE),
+        ('Iced Tea', 1.50, 'images/icedtea.png', FALSE);
 
 INSERT INTO condiments (product, price, image, chosen)
 VALUES  ('Ketchup', 0.25, 'images/ketchup.png', FALSE),
