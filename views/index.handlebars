@@ -2,14 +2,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-1"></div>
-      <div class="col-md-5 z-depth-3">
+      <div class="col-md-4 z-depth-3">
         <center>
       <h4 class="sub-heading">Menu</h4>
         </center>
       <div id="ready_to_eat">
 <br>
         <!-- Dynamically Insert Ready Burgers Here -->
-      <div id="Meats">
+      <div class="foodSection" id="Meats">
         {{#each meats_data}}
           {{#unless this.chosen}}
           <!-- <li> -->
@@ -23,7 +23,7 @@
         {{/each}}
         </div>
 
-        <div id="Buns">
+        <div class="foodSection" id="Buns">
           {{#each data.buns}}
             {{#unless this.chosen}}
             <!-- <li> -->
@@ -37,10 +37,10 @@
           {{/each}}
           </div>
 
-          <div id="Cheeses">
+          <div class="foodSection" id="Cheeses">
             {{#each data.cheeses}}
               {{#unless this.chosen}}
-              <li>
+              <!-- <li> -->
       		<p><span class="label"></span> <img src="{{this.image}}"/></p>
           <p><span class="label"></span> {{this.product}}</p>
           <p><span class="label">Price:</span> {{this.price}}</p>
@@ -51,7 +51,7 @@
             {{/each}}
             </div>
 
-            <div id="Veggies">
+            <div class="foodSection" id="Veggies">
               {{#each veggies}}
                 {{#unless this.chosen}}
                 <!-- <li> -->
@@ -65,7 +65,7 @@
               {{/each}}
               </div>
 
-              <div id="Sides">
+              <div class="foodSection" id="Sides">
                 {{#each sides}}
                   {{#unless this.chosen}}
                   <li>
@@ -79,7 +79,7 @@
                 {{/each}}
                 </div>
 
-                <div id="Drinks">
+                <div class="foodSection" id="Drinks">
                   {{#each drinks}}
                     {{#unless this.chosen}}
                     <li>
@@ -93,7 +93,7 @@
                   {{/each}}
                   </div>
 
-                  <div id="Add_On">
+                  <div class="foodSection" id="Add_On">
                     {{#each add_on}}
                       {{#unless this.chosen}}
                       <li>
@@ -110,7 +110,7 @@
       </div>
     </div>
 
-<div class="col-md-1"></div>
+<div class="col-md-2"></div>
 <div class="col-md-4 z-depth-3">
   <center>
       <h4 class="sub-heading">Receipt</h4>
@@ -129,7 +129,7 @@
       </div>
     </div>
   </center>
-  <div class="col-md-1"></div>
+  <div class="col-md-4"></div>
 </div>
     </div>
   </div>

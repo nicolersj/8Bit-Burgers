@@ -13,6 +13,7 @@ background-size: cover;
   color: black;
   text-shadow: -.5px 0 grey, 0 .5px grey, .5px 0 grey, 0 -.5px grey;
   padding-bottom: 20px;
+  float: left;
 
 
 }
@@ -20,4 +21,8 @@ background-size: cover;
 .sub-heading{
   border-bottom: 5px dashed black;
 
+}
+
+.foodSection {
+  float: left;
 }
