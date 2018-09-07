@@ -25,7 +25,7 @@ var orm = {
         connection.query(queryString, [col, table], function(err, result){
                 if(err)throw err;
 
-              console.log(result);  
+              console.log(result);
 
               cb(err, result);
 
