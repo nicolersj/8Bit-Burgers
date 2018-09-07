@@ -4,7 +4,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "gwbootcamp",
+    password: "lotus",
     database: "burger_bitdb"
 });
 
@@ -25,7 +25,7 @@ var orm = {
         connection.query(queryString, [col, table], function(err, result){
                 if(err)throw err;
 
-              console.log(result);  
+              console.log(result);
 
               cb(err, result);
 
