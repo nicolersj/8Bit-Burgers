@@ -211,13 +211,69 @@
       <div id="already_eaten">
 <br>
         <!-- Dynamically Insert Eaten Burgers Here -->
-        {{#each burgers}}
-          {{#if this.devoured}}
+        <!-- meats -->
+        {{#each data.meats}}
+          {{#if this.chosen}}
             <div class="input-group">
-              <li class="form-control">{{this.id}}. {{this.burger_name}}</li>
+              <li class="form-control"><img src="{{this.image}}"/> {{this.product}}......{{this.price}}</li>
             </div>
           {{/if}}
         {{/each}}
+        <!-- end of meats -->
+        <!-- buns -->
+        {{#each data.buns}}
+          {{#if this.chosen}}
+            <div class="input-group">
+              <li class="form-control"><img src="{{this.image}}"/> {{this.product}}......{{this.price}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+        <!-- end of buns -->
+        <!-- cheeses -->
+        {{#each data.cheeses}}
+          {{#if this.chosen}}
+            <div class="input-group">
+              <li class="form-control"><img src="{{this.image}}"/> {{this.product}}......{{this.price}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+        <!-- end of cheeses -->
+        <!-- veggies -->
+        {{#each data.veggies}}
+          {{#if this.chosen}}
+            <div class="input-group">
+              <li class="form-control"><img src="{{this.image}}"/> {{this.product}}......{{this.price}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+        <!-- end of veggies -->
+        <!-- add ons -->
+        {{#each data.add_ons}}
+          {{#if this.chosen}}
+            <div class="input-group">
+              <li class="form-control"><img src="{{this.image}}"/> {{this.product}}......{{this.price}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+        <!-- end of add ons -->
+        <!-- sides -->
+        {{#each data.sides}}
+          {{#if this.chosen}}
+            <div class="input-group">
+              <li class="form-control"><img src="{{this.image}}"/> {{this.product}}......{{this.price}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+        <!-- end of sides -->
+        <!-- drinks -->
+        {{#each data.drinks}}
+          {{#if this.chosen}}
+            <div class="input-group">
+              <li class="form-control"><img src="{{this.image}}"/> {{this.product}}......{{this.price}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+        <!-- end of drinks -->
 
       </div>
     </div>
