@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
 });
 
 
-router.put('/order', function(req, res) {
+router.put('/add_ons/update', function(req, res) {
   // db.update(req.body.burger_id, function(result) {
   //   console.log(burger_data)
   // });

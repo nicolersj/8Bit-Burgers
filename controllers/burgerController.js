@@ -80,5 +80,13 @@ router.get("/", function(req, res){
     res.render("index", {data: data});
 });
 
+// router.put('/add_ons/update',function(req,res){
+//   console.log('request', req);
+//   burger.update(req.body.id, function(result){
+//     console.log(result);
+//     res.redirect('/');
+//   });
+// });
+
 
 module.exports = router;
