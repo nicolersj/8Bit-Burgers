@@ -4,7 +4,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "gwbootcamp",
+    password: "1875Njr1875",
     database: "burger_bitdb"
 });
 
@@ -31,6 +31,13 @@ var orm = {
 
         });
 
+    },
+
+    update: function(tableInput, condition, cb){
+      connection.query('UPDATE '+tableInput+' SET chosen=true WHERE id='+condition+';', function(err,result){
+      if(err)throw err;
+      cb(result);
+      })
     }
 }
 

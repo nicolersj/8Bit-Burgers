@@ -1,136 +1,350 @@
 <div id="home">
   <div class="container">
     <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-5 z-depth-3 ">
+
+
+      <!-- menu section  -->
+
+      <div class="col-md-6 z-depth-3">
         <center>
       <h4 class="sub-heading">Menu</h4>
         </center>
-      <div id="ready_to_eat">
 <br>
         <!-- Dynamically Insert Ready Burgers Here -->
-      <div id="Meats">
-        {{#each meats_data}}
-          {{#unless this.chosen}}
-          <li>
-  		<p><span class="label"></span> {{this.image}}</p>
-      <p><span class="label"></span> {{this.product}}</p>
-      <p><span class="label">Price:</span> {{this.price}}</p>
-      <button class="btn btn-success devour-button" type="submit">Select It!</button>
 
+        <div class="panel-group" id="accordion">
 
-        {{/unless}}
-        {{/each}}
-        </div>
-
-        <div id="Buns">
-          {{#each buns_data}}
-            {{#unless this.chosen}}
-            <li>
-    		<p><span class="label"></span> {{this.image}}</p>
-        <p><span class="label"></span> {{this.product}}</p>
-        <p><span class="label">Price:</span> {{this.price}}</p>
-        <button class="btn btn-success devour-button" type="submit">Select It!</button>
-
-
-          {{/unless}}
-          {{/each}}
-          </div>
-
-          <div id="Cheeses">
-            {{#each cheeses}}
-              {{#unless this.chosen}}
-              <li>
-      		<p><span class="label"></span> {{this.image}}</p>
-          <p><span class="label"></span> {{this.product}}</p>
-          <p><span class="label">Price:</span> {{this.price}}</p>
-          <button class="btn btn-success devour-button" type="submit">Select It!</button>
-
-
-            {{/unless}}
-            {{/each}}
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                Meat Choices:</a>
+              </h4>
             </div>
-
-            <div id="Veggies">
-              {{#each veggies}}
-                {{#unless this.chosen}}
-                <li>
-        		<p><span class="label"></span> {{this.image}}</p>
-            <p><span class="label"></span> {{this.product}}</p>
-            <p><span class="label">Price:</span> {{this.price}}</p>
-            <button class="btn btn-success devour-button" type="submit">Select It!</button>
-
-
-              {{/unless}}
-              {{/each}}
-              </div>
-
-              <div id="Sides">
-                {{#each sides}}
-                  {{#unless this.chosen}}
-                  <li>
-          		<p><span class="label"></span> {{this.image}}</p>
-              <p><span class="label"></span> {{this.product}}</p>
-              <p><span class="label">Price:</span> {{this.price}}</p>
-              <button class="btn btn-success devour-button" type="submit">Select It!</button>
-
-
-                {{/unless}}
-                {{/each}}
-                </div>
-
-                <div id="Drinks">
-                  {{#each drinks}}
+            <div id="collapse1" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <div class="foodSection" id="Meats">
+                  {{#each data.meats}}
                     {{#unless this.chosen}}
-                    <li>
-            		<p><span class="label"></span> {{this.image}}</p>
+                    <!-- <li> -->
+                <p><span class="label"></span> <img src="{{this.image}}"/></p>
                 <p><span class="label"></span> {{this.product}}</p>
                 <p><span class="label">Price:</span> {{this.price}}</p>
-                <button class="btn btn-success devour-button" type="submit">Select It!</button>
+                <div id="chosenButton" class="text-center">
+            <form method="POST" action="/burgers/update?_method=PUT"
+            class="button-size">
+              <input type="hidden" name="id" type="text"
+              value={{this.id}}>
+              <br>
+              <button type="submit" class="btn btn-default text-center">
+              Select It!</button>
+            </form>
+          </div>
 
 
                   {{/unless}}
                   {{/each}}
                   </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                Bun Choices:</a>
+              </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+              <div class="panel-body"><div class="foodSection" id="Buns">
+                {{#each data.buns}}
+                  {{#unless this.chosen}}
+                  <!-- <li> -->
+              <p><span class="label"></span> <img src="{{this.image}}"/></p>
+              <p><span class="label"></span> {{this.product}}</p>
+              <p><span class="label">Price:</span> {{this.price}}</p>
+              <div id="chosenButton" class="text-center">
+          <form method="POST" action="/burgers/update?_method=PUT"
+          class="button-size">
+            <input type="hidden" name="id" type="text"
+            value={{this.id}}>
+            <br>
+            <button type="submit" class="btn btn-default text-center">
+            Select It!</button>
+          </form>
+        </div>
 
-                  <div id="Add_On">
-                    {{#each add_on}}
-                      {{#unless this.chosen}}
-                      <li>
-              		<p><span class="label"></span> {{this.image}}</p>
-                  <p><span class="label"></span> {{this.product}}</p>
-                  <p><span class="label">Price:</span> {{this.price}}</p>
-                  <button class="btn btn-success devour-button" type="submit">Select It!</button>
+
+                {{/unless}}
+                {{/each}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                Cheese Choices:</a>
+              </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="foodSection" id="Cheeses">
+                {{#each data.cheeses}}
+                  {{#unless this.chosen}}
+                  <!-- <li> -->
+              <p><span class="label"></span> <img src="{{this.image}}"/></p>
+              <p><span class="label"></span> {{this.product}}</p>
+              <p><span class="label">Price:</span> {{this.price}}</p>
+              <div id="chosenButton" class="text-center">
+          <form method="POST" action="/burgers/update?_method=PUT"
+          class="button-size">
+            <input type="hidden" name="id" type="text"
+            value={{this.id}}>
+            <br>
+            <button type="submit" class="btn btn-default text-center">
+            Select It!</button>
+          </form>
+        </div>
 
 
-                    {{/unless}}
-                    {{/each}}
-                    </div>
+                {{/unless}}
+                {{/each}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                Veggie Choices:</a>
+              </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="foodSection" id="Veggies">
+                  {{#each data.veggies}}
+                    {{#unless this.chosen}}
+                    <!-- <li> -->
+                <p><span class="label"></span> <img src="{{this.image}}"/></p>
+                <p><span class="label"></span> {{this.product}}</p>
+                <p><span class="label">Price:</span> {{this.price}}</p>
+                <div id="chosenButton" class="text-center">
+            <form method="POST" action="/burgers/update?_method=PUT"
+            class="button-size">
+              <input type="hidden" name="id" type="text"
+              value={{this.id}}>
+              <br>
+              <button type="submit" class="btn btn-default text-center">
+              Select It!</button>
+            </form>
+          </div>
 
-      </div>
+
+                  {{/unless}}
+                  {{/each}}
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                Side Options:</a>
+              </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="foodSection" id="Sides">
+                  {{#each data.sides}}
+                    {{#unless this.chosen}}
+                    <!-- <li> -->
+                <p><span class="label"></span> <img src="{{this.image}}"/></p>
+                <p><span class="label"></span> {{this.product}}</p>
+                <p><span class="label">Price:</span> {{this.price}}</p>
+                <div id="chosenButton" class="text-center">
+            <form method="POST" action="/burgers/update?_method=PUT"
+            class="button-size">
+              <input type="hidden" name="id" type="text"
+              value={{this.id}}>
+              <br>
+              <button type="submit" class="btn btn-default text-center">
+              Select It!</button>
+            </form>
+          </div>
+
+
+                  {{/unless}}
+                  {{/each}}
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                Drink Options:</a>
+              </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="foodSection" id="Drinks">
+                  {{#each data.drinks}}
+                    {{#unless this.chosen}}
+                    <!-- <li> -->
+                <p><span class="label"></span> <img src="{{this.image}}"/></p>
+                <p><span class="label"></span> {{this.product}}</p>
+                <p><span class="label">Price:</span> {{this.price}}</p>
+                <div id="chosenButton" class="text-center">
+            <form method="POST" action="/burgers/update?_method=PUT"
+            class="button-size">
+              <input type="hidden" name="id" type="text"
+              value={{this.id}}>
+              <br>
+              <button type="submit" class="btn btn-default text-center">
+              Select It!</button>
+            </form>
+          </div>
+
+
+                  {{/unless}}
+                  {{/each}}
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                Premium Burger Add Ons:</a>
+              </h4>
+            </div>
+            <div id="collapse7" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="foodSection" id="add_ons">
+                  {{#each data.add_ons}}
+                    {{#unless this.chosen}}
+                    <!-- <li> -->
+                <p><span class="label"></span> <img src="{{this.image}}"/></p>
+                <p><span class="label"></span> {{this.product}}</p>
+                <p><span class="label">Price:</span> {{this.price}}</p>
+                <div id="chosenButton" class="text-center">
+            <form method="POST" action="/burgers/update?_method=PUT"
+            class="button-size">
+              <input type="hidden" name="id" type="text"
+              value={{this.id}}>
+              <br>
+              <button type="submit" class="btn btn-default text-center">
+              Select It!</button>
+            </form>
+          </div>
+
+
+                  {{/unless}}
+                  {{/each}}
+                  </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
     </div>
 
+<!--  end of menu section-->
+
+
+<!-- divider -->
 <div class="col-md-1"></div>
-<div class="col-md-4 z-depth-3">
+<!-- end of divider -->
+
+
+<!-- Receipt -->
+
+<div class="col-md-5 z-depth-3">
   <center>
       <h4 class="sub-heading">Receipt</h4>
     </center>
       <div id="already_eaten">
 <br>
         <!-- Dynamically Insert Eaten Burgers Here -->
-        {{#each burgers}}
-          {{#if this.devoured}}
+        <!-- meats -->
+        {{#each data.meats}}
+          {{#if this.chosen}}
             <div class="input-group">
-              <li class="form-control">{{this.id}}. {{this.burger_name}}</li>
+              <li class="form-control"><img src="{{this.image}}"/> {{this.product}}......{{this.price}}</li>
             </div>
           {{/if}}
         {{/each}}
+        <!-- end of meats -->
+        <!-- buns -->
+        {{#each data.buns}}
+          {{#if this.chosen}}
+            <div class="input-group">
+              <li class="form-control"><img src="{{this.image}}"/> {{this.product}}......{{this.price}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+        <!-- end of buns -->
+        <!-- cheeses -->
+        {{#each data.cheeses}}
+          {{#if this.chosen}}
+            <div class="input-group">
+              <li class="form-control"><img src="{{this.image}}"/> {{this.product}}......{{this.price}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+        <!-- end of cheeses -->
+        <!-- veggies -->
+        {{#each data.veggies}}
+          {{#if this.chosen}}
+            <div class="input-group">
+              <li class="form-control"><img src="{{this.image}}"/> {{this.product}}......{{this.price}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+        <!-- end of veggies -->
+        <!-- add ons -->
+        {{#each data.add_ons}}
+          {{#if this.chosen}}
+            <div class="input-group">
+              <li class="form-control"><img src="{{this.image}}"/> {{this.product}}......{{this.price}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+        <!-- end of add ons -->
+        <!-- sides -->
+        {{#each data.sides}}
+          {{#if this.chosen}}
+            <div class="input-group">
+              <li class="form-control"><img src="{{this.image}}"/> {{this.product}}......{{this.price}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+        <!-- end of sides -->
+        <!-- drinks -->
+        {{#each data.drinks}}
+          {{#if this.chosen}}
+            <div class="input-group">
+              <li class="form-control"><img src="{{this.image}}"/> {{this.product}}......{{this.price}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+        <!-- end of drinks -->
 
       </div>
     </div>
   </center>
-  <div class="col-md-1"></div>
-</div>
+
+<!-- end of Receipt -->
+
+      </div>
     </div>
   </div>
 
