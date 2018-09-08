@@ -1,7 +1,7 @@
 var sequelize = require("sequelize");
 
 
-var sequelize = new sequelize("burger_bitdb", "root", "1875Njr1875",{
+var sequelize = new sequelize("burger_bitdb", "root", "",{
     host: "localhost",
     port: 3306,
     dialect: "mysql",
