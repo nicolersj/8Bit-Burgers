@@ -89,4 +89,10 @@ router.get("/", function(req, res){
 // });
 
 
+router.post('/burger/update/:id', function (req, res) {
+    burger.updateOne(req.params.id, function() {
+      res.redirect('/index');
+    });
+  });
+
 module.exports = router;

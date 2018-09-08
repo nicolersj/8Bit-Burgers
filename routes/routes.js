@@ -9,12 +9,13 @@ router.get('/', function(req, res) {
 });
 
 
-router.put('/add_ons/update', function(req, res) {
-  // db.update(req.body.burger_id, function(result) {
-  //   console.log(burger_data)
-  // });
-  // res.redirect('/');
-  console.log("order food")
+router.put('/burgers/update', function(req, res) {
+  console.log("order food", req)
+  db.update(req.body.id, function(result) {
+    console.log(burger_data)
+  });
+  res.redirect('/');
+
 });
 
 router.post('/save', function(req, res) {
